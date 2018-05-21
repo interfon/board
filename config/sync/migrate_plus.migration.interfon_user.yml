@@ -1,0 +1,81 @@
+uuid: 70d9e645-4c66-4235-a104-a0f29a4cc7e2
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - taxonomy
+      - interfon_data_import
+_core:
+  default_config_hash: XlLtG3eAX7biX1P-kkk2lk9e5s1yVZvy0FCyN6u8WRg
+id: interfon_user
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - interfon
+  - user
+migration_group: interfon
+label: 'Interfon user'
+source:
+  plugin: csv
+  delimiter: ;
+  enclosure: '"'
+  track_changes: true
+  header_row_count: 1
+  path: modules/custom/interfon_data_import/data/user.csv
+  keys:
+    - email
+  column_names:
+    -
+      status: 'user status'
+    -
+      email: 'email address'
+    -
+      password: 'user password'
+    -
+      title: salutation
+    -
+      first: 'first name'
+    -
+      last: 'last name'
+    -
+      language: 'user language'
+    -
+      function: 'Interfon function(s)'
+    -
+      committee: 'Interfon committee membership(s)'
+process:
+  status: status
+  mail: email
+  name: email
+  pass: email
+  field_user_salutation:
+    plugin: migration_lookup
+    migration: interfon_salutation_en
+    source: title
+  field_user_first_name: first
+  field_user_last_name: last
+  field_user_interfon_function:
+    -
+      plugin: explode
+      delimiter: ','
+      source: function
+    -
+      plugin: migration_lookup
+      migration: interfon_function_fr
+  field_user_interfon_committee:
+    -
+      plugin: explode
+      delimiter: ','
+      source: committee
+    -
+      plugin: migration_lookup
+      migration: interfon_committee_fr
+destination:
+  plugin: 'entity:user'
+migration_dependencies:
+  required:
+    - interfon_committee_en
+    - interfon_function_en
+    - interfon_salutation_en

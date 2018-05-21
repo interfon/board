@@ -1,0 +1,14 @@
+uuid: 6adebf5b-5f64-4809-9a26-f67c498a51da
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.interfon_member
+  module:
+    - user
+id: user_add_role_action.interfon_member
+label: 'Ajouter le rôle Societaire aux utilisateurs sélectionnés'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: interfon_member

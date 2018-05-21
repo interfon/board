@@ -1,0 +1,9 @@
+uuid: 983db741-fabf-425b-a6db-6573d1595605
+langcode: fr
+status: true
+dependencies: {  }
+id: interfon_member
+label: Sociétaire
+weight: 3
+is_admin: null
+permissions: {  }

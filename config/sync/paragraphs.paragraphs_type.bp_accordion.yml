@@ -1,0 +1,11 @@
+uuid: 29f80f18-f42d-48d9-897a-1b56f44097c5
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: 3fqkZ6nl2nZ05a_fx_FGQq7QZxneM0Ux1-1GRnmKYak
+id: bp_accordion
+label: Accordéon
+icon_uuid: null
+description: null
+behavior_plugins: {  }

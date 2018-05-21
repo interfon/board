@@ -1,0 +1,27 @@
+uuid: bbb1742f-2a48-4828-965a-4eaa85886c75
+langcode: fr
+status: true
+dependencies:
+  config:
+    - field.field.node.page_user.body
+    - node.type.page_user
+  module:
+    - text
+    - user
+id: node.page_user.default
+targetEntityType: node
+bundle: page_user
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

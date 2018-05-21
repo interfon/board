@@ -1,0 +1,14 @@
+uuid: 0fe0d76b-bd41-4c47-ad8f-f9e95f112838
+langcode: fr
+status: true
+dependencies:
+  config:
+    - user.role.interfon_member
+  module:
+    - user
+id: user_remove_role_action.interfon_member
+label: 'Enlever le rôle Societaire des utilisateurs sélectionnés'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: interfon_member

@@ -1,0 +1,55 @@
+uuid: 28dea0ad-fa20-40ad-81d5-536f2931cd85
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - taxonomy
+      - interfon_data_import
+_core:
+  default_config_hash: PuDDhu5XUT1gL1SpWtsAUBzZ8z8kBpF0nVr77IG7IAY
+id: interfon_committee_fr
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - committee
+  - interfon
+migration_group: interfon
+label: 'Interfon commission'
+source:
+  plugin: csv
+  delimiter: ;
+  enclosure: '"'
+  track_changes: true
+  header_row_count: 1
+  path: modules/custom/interfon_data_import/data/committee.csv
+  keys:
+    - tid
+  column_names:
+    -
+      tid: 'Term Id'
+    -
+      weight: Weight
+    -
+      name_en: Name
+    -
+      description_en: 'Description (English)'
+    -
+      name_fr: Nom
+    -
+      description_fr: 'Description (français)'
+process:
+  vid:
+    plugin: default_value
+    default_value: interfon_committee
+  tid: tid
+  weight: weight
+  langcode:
+    plugin: default_value
+    default_value: fr
+  name: name_fr
+  description: description_fr
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: {  }

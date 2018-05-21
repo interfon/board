@@ -1,0 +1,55 @@
+uuid: cd4450a2-ac78-44f3-a933-f8533e7f6ee5
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - taxonomy
+      - interfon_data_import
+_core:
+  default_config_hash: 8_oyJkhSFBBS2MWiGCIzg05V58mQCs8-OvOyrutw9mc
+id: interfon_function_fr
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - function
+  - interfon
+migration_group: interfon
+label: 'Interfon fonction'
+source:
+  plugin: csv
+  delimiter: ;
+  enclosure: '"'
+  track_changes: true
+  header_row_count: 1
+  path: modules/custom/interfon_data_import/data/function.csv
+  keys:
+    - tid
+  column_names:
+    -
+      tid: 'Term Id'
+    -
+      weight: Weight
+    -
+      name_en: Name
+    -
+      description_en: 'Description (English)'
+    -
+      name_fr: Nom
+    -
+      description_fr: 'Description (français)'
+process:
+  vid:
+    plugin: default_value
+    default_value: interfon_function
+  tid: tid
+  weight: weight
+  langcode:
+    plugin: default_value
+    default_value: fr
+  name: name_fr
+  description: description_fr
+destination:
+  plugin: 'entity:taxonomy_term'
+migration_dependencies: {  }

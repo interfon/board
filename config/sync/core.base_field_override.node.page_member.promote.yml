@@ -1,0 +1,24 @@
+uuid: 089d1c07-07e7-47eb-b9f9-82036077e6a8
+langcode: fr
+status: true
+dependencies:
+  config:
+    - node.type.page_member
+_core:
+  default_config_hash: fPUEnm4T5zfZRr3ttDUqq7yCDd2uW3clWD-pvos4tlQ
+id: node.page_member.promote
+field_name: promote
+entity_type: node
+bundle: page_member
+label: 'Promu en page d''accueil'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Activé
+  off_label: Désactivé
+field_type: boolean

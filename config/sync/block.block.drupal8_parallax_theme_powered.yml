@@ -1,0 +1,22 @@
+uuid: 69b79e54-d651-4ff7-b052-c9dc5b9b599c
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - drupal8_parallax_theme
+_core:
+  default_config_hash: vgKxwOZLWW1IhyV_PvUA0JRxI8WDt0jNnzhXghM0RAY
+id: drupal8_parallax_theme_powered
+theme: drupal8_parallax_theme
+region: auto_hidden_block
+weight: -10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }
