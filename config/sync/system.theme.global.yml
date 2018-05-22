@@ -1,6 +1,6 @@
 favicon:
   mimetype: image/vnd.microsoft.icon
-  path: 'public://favicon_1.ico'
+  path: sites/default/files/media/favicon.ico
   url: ''
   use_default: false
 features:
@@ -9,7 +9,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://interfon-logo59x53_1.png'
+  path: sites/default/files/media/interfon-logo.png
   url: ''
   use_default: false
 _core:

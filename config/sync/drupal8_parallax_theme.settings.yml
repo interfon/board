@@ -18,15 +18,15 @@ show_slideshow: 1
 no_of_slides: '3'
 slide_title_1: 'Mutuelle Santé Interfon'
 slide_description_1: 'Complémentaire santé Interfon gérée par la Section Mutualiste professionnelle d''ADREA Mutuelle '
-slide_url_1: '#'
+slide_url_1: ./mutuelle
 slide_image_path_1: /images/slider/slide_01.jpg
 slide_title_2: 'Bureau du CERN'
 slide_description_2: 'Notre bureau annexe au CERN de Meyrin'
-slide_url_2: '#'
+slide_url_2: ./bureau-cern
 slide_image_path_2: /images/slider/slide_02.jpg
 slide_title_3: 'Bureau principal Interfon'
 slide_description_3: 'Bureau principal Interfon - Technoparc de Saint-Genis-Pouilly'
-slide_url_3: '#'
+slide_url_3: ./bureau-technoparc
 slide_image_path_3: /images/slider/slide_03.jpg
 _core:
   default_config_hash: KaLNVgq6qGhSV-TerDCQAiCaPJrmq41RgHhVcYzbxjI
