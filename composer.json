@@ -56,7 +56,6 @@
     }
   }],
   "require": {
-    "ckeditor/autogrow": "4.8.*",
     "ckeditor/ckeditor.autogrow": "4.8.*",
     "ckeditor/ckeditor.codemirror": "^1.17",
     "components/highlightjs": "9.7.*",
