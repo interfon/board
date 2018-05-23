@@ -69,6 +69,7 @@
     "drupal/bootstrap_paragraphs": "^2.0@beta",
     "drupal/cas": "^1.0",
     "drupal/console": "^1.0.2",
+    "drupal/content_sync": "^2.0",
     "drupal/content_type_clone": "1.x-dev",
     "drupal/core": "~8.5.3",
     "drupal/devel": "^1.2",
